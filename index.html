@@ -248,20 +248,6 @@
   .col-refs a{border-bottom:1px solid var(--line2)}
   .column .act{display:flex;justify-content:flex-end;margin-top:16px}
   @media (max-width:640px){.hero .wrap{padding:32px 22px 30px}.band .wrap{padding:34px 22px 72px}.column{padding:26px 22px 24px;border-radius:20px;margin-left:16px;margin-right:16px}}
-
-  /* email subscribe */
-  .subscribe{max-width:1080px;margin:56px auto 0;padding:32px 40px;background:#fff;border-radius:24px;box-shadow:0 1px 3px rgba(15,23,42,.07);display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:center}
-  .subscribe h2{font-size:21px;font-weight:800;margin:6px 0 8px}
-  .subscribe p{margin:0;font-size:14px;line-height:1.9;color:var(--ink2)}
-  .sub-form{display:flex;flex-wrap:wrap;gap:10px}
-  .sub-form input{flex:1 1 200px;min-width:0;border:1px solid var(--line2);border-radius:999px;padding:12px 18px;font-size:14px;font-family:inherit}
-  .sub-form input:focus{outline:2px solid var(--accent);border-color:transparent}
-  .sub-form button{border:0;background:var(--accent);color:#fff;font-weight:700;border-radius:999px;padding:12px 24px;font-size:14px;cursor:pointer;font-family:inherit}
-  .sub-form button:hover{background:var(--accent-ink)}
-  .sub-form small{flex-basis:100%;color:var(--sub);font-size:11.5px;line-height:1.8}
-  .sub-form small a{border-bottom:1px solid var(--line2)}
-  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-  @media (max-width:760px){.subscribe{grid-template-columns:1fr;margin:40px 16px 0;padding:26px 22px}}
 </style>
 </head>
 <body>
@@ -270,7 +256,7 @@
   <span id="today"></span>
   <span style="display:flex;gap:18px;align-items:center">
     <span class="pulse"><i></i>毎朝 7:00 ごろ更新（中国時間）</span>
-    <a href="feed.xml" title="RSSリーダー用のデータです">RSS</a>
+    <a href="feed.xml">RSS</a>
   </span>
 </div></div>
 
@@ -290,7 +276,6 @@
   <button data-go="sec-news">ニュース</button>
   <button data-go="sec-ideas">週間コラム</button>
   <button data-go="sec-back">バックナンバー</button>
-  <button data-go="sec-subscribe">メール購読</button>
   <span class="sp"></span>
   <select id="picker" aria-label="号を選択"></select>
 </div></nav>
@@ -331,19 +316,6 @@
       <ul class="backs" id="backs"></ul>
     </section>
   </div>
-  <section class="subscribe" id="sec-subscribe">
-    <div class="sub-text">
-      <div class="eyebrow">Subscribe</div>
-      <h2>メールで受け取る</h2>
-      <p>新しい号が公開されると、登録したメールアドレスに自動でお知らせが届きます。メールの下部の「配信停止」リンクから、いつでも解除できます。</p>
-    </div>
-    <form class="sub-form" action="https://api.follow.it/subscribe" method="post" target="_blank">
-      <label for="sub-email" class="sr">メールアドレス</label>
-      <input id="sub-email" type="email" name="email" placeholder="メールアドレスを入力" required autocomplete="email">
-      <button type="submit">購読する</button>
-      <small>登録・配信はfollow.itが行います。登録後、確認メールが届きます。配信停止は、受信メール内のリンクまたは <a href="https://follow.it/" target="_blank" rel="noopener">follow.it</a> から行えます。</small>
-    </form>
-  </section>
 </main>
 
 <footer>
@@ -358,8 +330,7 @@
     </div>
     <div>
       <h4>購読</h4>
-      <p><a href="#sec-subscribe">メールで購読・配信停止</a></p>
-      <p><a href="feed.xml">RSSフィード</a>（RSSリーダー用）</p>
+      <p><a href="feed.xml">RSSフィード</a></p>
     </div>
   </div>
   <div class="copyright"><div class="wrap">China Gas Turbine Watch</div></div>
