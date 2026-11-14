@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>中国ガスタービン・ウォッチ｜China Gas Turbine Watch</title>
+<meta name="description" content="中国ガスタービン業界の直近1週間のニュースを毎朝要約。国産燃機、外資OEM、政策、海外受注の動きと、SNS投稿用の下書きアイデアを掲載。">
+<meta property="og:title" content="中国ガスタービン・ウォッチ｜China Gas Turbine Watch">
+<meta property="og:description" content="中国ガスタービン業界ニュースを毎朝更新">
+<meta property="og:type" content="website">
+<link rel="alternate" type="application/rss+xml" title="中国ガスタービン・ウォッチ" href="feed.xml">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23b3261e'/%3E%3Ctext x='32' y='43' font-size='30' text-anchor='middle' fill='white' font-family='serif' font-weight='900'%3EGT%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@600;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#fbfaf7; --card:#ffffff; --ink:#15191f; --sub:#5d6672; --line:#dcd8cf; --rule:#15191f;
+    --accent:#b3261e; --accent2:#0b4f8a; --tag:#f0ede6; --ok:#1f7a4d;
+    --serif:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
+    --sans:"Noto Sans JP","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --paper:#121417; --card:#1a1d22; --ink:#ebe8e2; --sub:#a0a8b2; --line:#30343b; --rule:#ebe8e2;
+      --accent:#ef6b62; --accent2:#7fb3e6; --tag:#24282e; --ok:#5cc48f; }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;font-size:15px}
+  a{color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+  /* top bar */
+  .topbar{border-bottom:1px solid var(--line);font-size:12px;color:var(--sub)}
+  .topbar .wrap{display:flex;justify-content:space-between;gap:10px;padding-top:7px;padding-bottom:7px;flex-wrap:wrap}
+  .live{color:var(--accent);font-weight:700}
+  .live::before{content:"●";margin-right:4px;font-size:10px}
+
+  /* masthead */
+  .mast{text-align:center;padding:26px 0 14px}
+  .mast .kicker{font-size:11px;letter-spacing:.35em;color:var(--sub);text-transform:uppercase}
+  .mast h1{font-family:var(--serif);font-weight:900;font-size:clamp(24px,6.4vw,52px);margin:4px 0 2px;letter-spacing:.04em;line-height:1.2}
+  .mast .en{font-family:var(--serif);font-style:italic;color:var(--sub);font-size:14px}
+  .rule2{border-top:3px solid var(--rule);border-bottom:1px solid var(--rule);height:6px;margin-top:14px}
+
+  /* nav */
+  nav{border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--paper);z-index:5}
+  nav .wrap{display:flex;gap:4px;overflow-x:auto;align-items:center}
+  nav button{font:inherit;font-size:13.5px;font-weight:500;background:none;border:0;color:var(--ink);padding:10px 12px;cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent}
+  nav button:hover{border-bottom-color:var(--accent)}
+  nav .spacer{flex:1}
+  select{font:inherit;font-size:12.5px;padding:4px 8px;border:1px solid var(--line);border-radius:4px;background:var(--card);color:var(--ink)}
+
+  .edline{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:12.5px;color:var(--sub);padding:14px 0 4px}
+  .edline b{color:var(--ink)}
+  .badge-old{background:var(--accent);color:#fff;border-radius:3px;padding:1px 8px;font-size:11.5px;margin-left:6px}
+
+  /* hero */
+  .hero{display:grid;grid-template-columns:1.65fr 1fr;gap:28px;padding:14px 0 26px;border-bottom:1px solid var(--line)}
+  .cat{display:inline-block;font-size:11.5px;font-weight:700;color:var(--accent);letter-spacing:.06em}
+  .hero-main h2{font-family:var(--serif);font-size:clamp(22px,3.2vw,32px);line-height:1.45;margin:6px 0 12px}
+  .hero-main h2 a{text-decoration:none}
+  .hero-main h2 a:hover{text-decoration:underline;text-decoration-thickness:1px}
+  .hero-main .dek{font-size:15.5px;color:var(--ink);margin:0 0 10px}
+  .byline{font-size:12.5px;color:var(--sub)}
+  .byline a{color:var(--accent2)}
+  .editorial{margin-top:18px;border-left:4px solid var(--accent);background:var(--card);padding:12px 16px;font-size:14px}
+  .editorial strong{font-family:var(--serif);display:block;font-size:13px;color:var(--accent);margin-bottom:2px}
+  .side h3,.sec-title{font-family:var(--serif);font-size:15px;margin:0 0 8px;padding-bottom:6px;border-bottom:2px solid var(--rule);display:flex;justify-content:space-between;align-items:baseline}
+  .side ol{list-style:none;margin:0;padding:0;counter-reset:n}
+  .side li{counter-increment:n;display:grid;grid-template-columns:28px 1fr;gap:6px;padding:10px 0;border-bottom:1px solid var(--line)}
+  .side li::before{content:counter(n);font-family:var(--serif);font-weight:900;font-size:20px;color:var(--accent);line-height:1.2}
+  .side li a{text-decoration:none;font-weight:500;font-size:14px;line-height:1.55}
+  .side li a:hover{text-decoration:underline}
+  .side .s-meta{font-size:11.5px;color:var(--sub);display:block;margin-top:2px}
+
+  section{padding:26px 0;border-bottom:1px solid var(--line)}
+  .sec-title{font-size:19px}
+  .sec-title small{font-family:var(--sans);font-size:12px;color:var(--sub);font-weight:400}
+
+  /* news grid */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .story{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--ink);padding:14px 16px 16px;display:flex;flex-direction:column}
+  .story.ctx{border-top-color:var(--sub)}
+  .story h4{font-family:var(--serif);font-size:16.5px;line-height:1.5;margin:4px 0 8px}
+  .story h4 a{text-decoration:none}
+  .story h4 a:hover{text-decoration:underline}
+  .story p{font-size:13.5px;color:var(--sub);margin:0 0 10px;flex:1}
+  .story .byline{display:flex;justify-content:space-between;gap:8px;border-top:1px dotted var(--line);padding-top:8px}
+  .ctxlabel{font-size:11px;border:1px solid var(--sub);color:var(--sub);border-radius:3px;padding:0 5px;margin-left:6px;font-weight:400}
+
+  /* ideas */
+  .ideas{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .idea{background:var(--card);border:1px solid var(--line);padding:16px 18px;display:flex;flex-direction:column}
+  .idea .num{font-family:var(--serif);font-weight:900;color:var(--accent);font-size:28px;line-height:1}
+  .idea h4{font-family:var(--serif);font-size:16.5px;line-height:1.5;margin:6px 0 6px}
+  .angle{font-size:12.5px;color:var(--sub);margin:0 0 10px}
+  .draft{white-space:pre-wrap;font-size:14px;background:var(--paper);border-left:3px solid var(--accent2);padding:10px 12px;flex:1}
+  .tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}
+  .tag{background:var(--tag);border-radius:999px;padding:1px 9px;font-size:12px;color:var(--sub)}
+  .refs{font-size:12px;color:var(--sub);margin-top:8px}
+  .refs a{color:var(--accent2)}
+  button.copy{margin-top:12px;font:inherit;font-size:13px;border:1px solid var(--ink);color:var(--ink);background:transparent;padding:6px 12px;cursor:pointer}
+  button.copy:hover{background:var(--ink);color:var(--paper)}
+  button.copy.done{border-color:var(--ok);color:var(--ok);background:transparent}
+
+  /* back numbers */
+  .backs{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
+  .back{background:var(--card);border:1px solid var(--line);padding:10px 12px;cursor:pointer;text-align:left;font:inherit;color:var(--ink)}
+  .back:hover{border-color:var(--ink)}
+  .back .d{font-size:12px;color:var(--accent);font-weight:700}
+  .back .t{font-family:var(--serif);font-size:14px;line-height:1.5;display:block;margin-top:2px}
+  .back.cur{border-color:var(--accent)}
+
+  footer{padding:24px 0 50px;font-size:12px;color:var(--sub)}
+  footer .mini{font-family:var(--serif);font-weight:900;color:var(--ink);font-size:15px}
+
+  @media (max-width:900px){ .hero{grid-template-columns:1fr} .grid,.ideas{grid-template-columns:1fr 1fr} }
+  @media (max-width:620px){ .grid,.ideas{grid-template-columns:1fr} .topbar .wrap{justify-content:center} }
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+  <span id="today"></span>
+  <span><span class="live">毎朝更新</span>　中国時間 7:00 ごろ</span>
+</div></div>
+
+<header class="wrap mast">
+  <div class="kicker">Daily Industry Brief</div>
+  <h1>中国ガスタービン・ウォッチ</h1>
+  <div class="en">China Gas Turbine Watch — 業界ニュースと投稿アイデア</div>
+  <div class="rule2"></div>
+</header>
+
+<nav><div class="wrap">
+  <button data-go="top">トップ</button>
+  <button data-go="sec-news">今週のニュース</button>
+  <button data-go="sec-ideas">投稿アイデア</button>
+  <button data-go="sec-back">バックナンバー</button>
+  <span class="spacer"></span>
+  <select id="picker" aria-label="号を選択"></select>
+</div></nav>
+
+<main class="wrap" id="top">
+  <div class="edline" id="edline"></div>
+
+  <div class="hero">
+    <div class="hero-main" id="hero"></div>
+    <aside class="side">
+      <h3>主な見出し</h3>
+      <ol id="heads"></ol>
+    </aside>
+  </div>
+
+  <section id="sec-news">
+    <h2 class="sec-title">今週のニュース <small id="news-count"></small></h2>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section id="sec-ideas">
+    <h2 class="sec-title">編集部の投稿アイデア <small>そのまま使える下書き3本</small></h2>
+    <div class="ideas" id="ideas"></div>
+  </section>
+
+  <section id="sec-back">
+    <h2 class="sec-title">バックナンバー <small id="back-count"></small></h2>
+    <div class="backs" id="backs"></div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div class="mini">中国ガスタービン・ウォッチ</div>
+  公開ニュースをもとにClaudeが毎朝自動で要約・作成しています。記事の著作権は各出典に帰属します。<a href="feed.xml">RSS</a>　投稿アイデアは下書きです。使う前に事実関係と社内規程を確認してください。
+</footer>
+
+<script>
+(async function(){
+  let data;
+  try{ const r = await fetch('editions.json?v='+Date.now(), {cache:'no-store'}); data = await r.json(); }
+  catch(err){ document.getElementById('hero').innerHTML='<p>データを読み込めませんでした。時間をおいて再読み込みしてください。</p>'; return; }
+  window.EDITIONS = data.editions || [];
+  if(!window.EDITIONS.length){ document.getElementById('hero').innerHTML='<p>まだ号がありません。</p>'; return; }
+
+  const E = window.EDITIONS.slice().sort((a,b)=> b.date.localeCompare(a.date));
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s==null?'':s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const wd = ['日','月','火','水','木','金','土'];
+  const fmtJP = d => { const t=new Date(d+'T00:00:00'); return isNaN(t)? d : t.getFullYear()+'年'+(t.getMonth()+1)+'月'+t.getDate()+'日（'+wd[t.getDay()]+'）'; };
+  const link = (n, inner) => '<a href="'+esc(n.url)+'" target="_blank" rel="noopener">'+inner+'</a>';
+
+  try{ const n=new Date(); $('today').textContent = n.getFullYear()+'年'+(n.getMonth()+1)+'月'+n.getDate()+'日（'+wd[n.getDay()]+'）'; }catch(_){}
+
+  E.forEach((e,i)=>{ const o=document.createElement('option'); o.value=e.date; o.textContent=e.date+(i===0?'（最新号）':''); $('picker').appendChild(o); });
+
+  function render(date){
+    const e = E.find(x=>x.date===date) || E[0];
+    const isLatest = e.date===E[0].date;
+    $('picker').value = e.date;
+    $('edline').innerHTML = '<span><b>'+esc(fmtJP(e.date))+'号</b>'+(isLatest?'':'<span class="badge-old">バックナンバー</span>')+'</span><span>対象期間 '+esc(e.period||'')+'　｜　通算 '+E.length+' 号</span>';
+
+    const news = e.news||[];
+    const top = news.find(n=>!n.ctx) || news[0];
+    $('hero').innerHTML = top ? (
+      '<span class="cat">'+esc(top.cat||'トップニュース')+'｜トップニュース</span>'+
+      '<h2>'+link(top, esc(top.title))+'</h2>'+
+      (top.summary?'<p class="dek">'+esc(top.summary)+'</p>':'')+
+      '<div class="byline">'+esc(top.date)+'　出典：'+link(top, esc(top.source))+'</div>'+
+      (e.summary?'<div class="editorial"><strong>今週のまとめ</strong>'+esc(e.summary)+'</div>':'')
+    ) : '';
+
+    $('heads').innerHTML = news.filter(n=>n!==top).slice(0,6).map(n=>
+      '<li><div>'+link(n, esc(n.title))+'<span class="s-meta">'+esc(n.cat?n.cat+'・':'')+esc(n.date)+'・'+esc(n.source)+(n.ctx?'・背景':'')+'</span></div></li>'
+    ).join('');
+
+    $('news-count').textContent = news.length+' 本';
+    $('grid').innerHTML = news.map(n=>
+      '<article class="story'+(n.ctx?' ctx':'')+'"><span class="cat">'+esc(n.cat||'ニュース')+(n.ctx?'<span class="ctxlabel">背景</span>':'')+'</span>'+
+      '<h4>'+link(n, esc(n.title))+'</h4>'+
+      '<p>'+esc(n.summary||'')+'</p>'+
+      '<div class="byline"><span>'+esc(n.date)+'</span>'+link(n, esc(n.source)+' ↗')+'</div></article>'
+    ).join('');
+
+    $('ideas').innerHTML = (e.ideas||[]).map((it,i)=>{
+      const refs = (it.refs||[]).map(r=>news[r]).filter(Boolean).map(n=>link(n, esc(n.source))).join('、');
+      return '<article class="idea"><div class="num">0'+(i+1)+'</div><h4>'+esc(it.title)+'</h4>'+
+        '<p class="angle">切り口：'+esc(it.angle)+'</p>'+
+        '<div class="draft">'+esc(it.draft)+'</div>'+
+        '<div class="tags">'+(it.tags||[]).map(t=>'<span class="tag">'+esc(t)+'</span>').join('')+'</div>'+
+        (refs?'<div class="refs">根拠：'+refs+'</div>':'')+
+        '<button class="copy" data-i="'+i+'">本文をコピー</button></article>';
+    }).join('');
+    document.querySelectorAll('button.copy').forEach(b=>b.addEventListener('click', async ()=>{
+      const it = e.ideas[+b.dataset.i];
+      const text = it.title+'\n\n'+it.draft+'\n\n'+(it.tags||[]).join(' ');
+      try{ await navigator.clipboard.writeText(text); b.textContent='コピーしました'; b.classList.add('done'); }
+      catch(_){ b.textContent='コピーできません。本文を選択してください'; }
+      setTimeout(()=>{ b.textContent='本文をコピー'; b.classList.remove('done'); }, 2200);
+    }));
+
+    $('back-count').textContent = '全 '+E.length+' 号';
+    $('backs').innerHTML = E.map(x=>{
+      const t = (x.news||[]).find(n=>!n.ctx) || (x.news||[])[0] || {};
+      return '<button class="back'+(x.date===e.date?' cur':'')+'" data-d="'+esc(x.date)+'"><span class="d">'+esc(fmtJP(x.date))+'号</span><span class="t">'+esc(t.title||'')+'</span></button>';
+    }).join('');
+    document.querySelectorAll('.back').forEach(b=>b.addEventListener('click', ()=>{ go(b.dataset.d); window.scrollTo(0,0); }));
+  }
+
+  function fromHash(){ const m = location.hash.match(/^#d-(\d{4})(\d{2})(\d{2})$/); return m ? m[1]+'-'+m[2]+'-'+m[3] : null; }
+  function go(d){
+    if(d===E[0].date){ if(location.hash){ location.hash=''; } else { render(d); } }
+    else { const h='d-'+d.replace(/-/g,''); if(location.hash==='#'+h){ render(d); } else { location.hash=h; } }
+  }
+  $('picker').addEventListener('change', ()=>go($('picker').value));
+  document.querySelectorAll('nav button[data-go]').forEach(b=>b.addEventListener('click', ()=>{
+    const el = $(b.dataset.go); if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+  }));
+  window.addEventListener('hashchange', ()=>render(fromHash()));
+  render(fromHash());
+})();
+</script>
+</body>
+</html>
