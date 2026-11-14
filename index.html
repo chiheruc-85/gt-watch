@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>中国ガスタービン・ウォッチ｜China Gas Turbine Watch</title>
-<meta name="description" content="中国ガスタービン業界の直近1週間のニュースを毎朝要約。国産燃機、外資OEM、政策、海外受注の動きと、SNS投稿用の下書きアイデアを掲載。">
+<meta name="description" content="中国ガスタービン業界の直近1週間のニュースを毎朝要約。国産燃機、外資OEM、政策、海外受注の動きと、一週間をまとめた週間コラムを掲載。">
 <meta property="og:title" content="中国ガスタービン・ウォッチ｜China Gas Turbine Watch">
 <meta property="og:description" content="中国ガスタービン業界ニュースを毎朝更新">
 <meta property="og:type" content="website">
@@ -181,42 +181,73 @@
   }
 
 
-  /* ---- design A: editorial light ---- */
-  :root{--ink:#16181c;--ink2:#3d434b;--sub:#737a84;--line:#e2ded6;--line2:#cfcac0;--paper:#fbf9f4;--navy:#16181c;--navy2:#2b3038;--accent:#c8321f;--accent-ink:#a32514}
+  /* ---- design C: bold modern ---- */
+  :root{--ink:#0f172a;--ink2:#334155;--sub:#64748b;--line:#e2e8f0;--line2:#cbd5e1;--paper:#f3f5f9;--navy:#0f172a;--navy2:#1e293b;--accent:#2452ff;--accent-ink:#1a3fd6;--serif:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic UI","Yu Gothic","Noto Sans CJK JP","Source Han Sans JP","Microsoft YaHei","PingFang SC",system-ui,sans-serif}
   body{background:var(--paper)}
   .hero::after,.band::after{display:none}
   .hero .wrap{min-height:0}
 
-  .util{background:var(--ink);color:#d8d5cd}
-  .mast{border-bottom:0}
-  .mast .wrap{flex-direction:column;align-items:center;text-align:center;gap:12px;padding-top:38px;padding-bottom:22px}
-  .brand{flex-direction:column;gap:12px}
-  .brand .ja{font-size:clamp(27px,4.6vw,46px);letter-spacing:.1em}
-  .brand .en{letter-spacing:.5em;margin-top:6px}
-  .mark{width:40px;height:40px}
-  .ed{text-align:center}.ed b{display:inline;margin-right:12px}
-  nav.sec{background:rgba(251,249,244,.96);border-top:1px solid var(--ink);border-bottom:3px double var(--ink)}
-  nav.sec .wrap{justify-content:center}
-  nav.sec .sp{flex:0 0 10px}
-  nav.sec select{background-color:transparent}
-  .hero{background:transparent;color:var(--ink)}
-  .hero .wrap{padding-top:60px;padding-bottom:52px;align-items:center;text-align:center;border-bottom:1px solid var(--line2)}
-  .hero .eyebrow{color:var(--accent)}
-  .hero h1{font-size:clamp(27px,4.4vw,54px);line-height:1.36;max-width:940px;margin:16px auto 20px}
-  .hero .dek{color:var(--ink2);max-width:700px;font-size:16.5px}
-  .hero .meta{color:var(--sub)}
-  .hero .meta a{color:var(--ink);border-color:var(--line2)}
-  .brief{padding-top:42px}
-  .band{background:transparent;color:var(--ink)}
-  .band .wrap{padding-top:46px;padding-bottom:0;border-top:3px double var(--ink);text-align:center}
-  .band .eyebrow{color:var(--accent)}
-  .band p{color:var(--ink2);margin:0 auto}
-  .ideas{margin-top:30px}
-  .idea{box-shadow:none;border:1px solid var(--line2);border-top:3px solid var(--ink)}
-  .copy{background:var(--ink)}
-  footer{background:var(--ink)}
-  @media (max-width:640px){.hero .wrap{padding-top:40px;padding-bottom:36px}}
-  @media (max-width:640px){nav.sec .wrap{justify-content:flex-start}}
+  .util{background:transparent;color:var(--sub)}.util a{color:var(--ink)}.pulse{color:var(--ink2)}
+  .mast{border:0}.mast .wrap{padding-top:10px}
+  .brand .ja{font-weight:800;letter-spacing:0}
+  .brand .en{font-family:var(--sans);font-weight:700;letter-spacing:.2em;color:var(--accent)}
+  nav.sec{background:rgba(243,245,249,.92);border:0}
+  nav.sec button{border-bottom:0;border-radius:999px;padding:7px 15px;margin:8px 0}
+  nav.sec button:hover{background:#fff;border:0}
+  .hero{width:calc(100% - 32px);max-width:1132px;margin:10px auto 0;border-radius:28px;background:linear-gradient(135deg,#1838e0 0%,#2452ff 45%,#7a3cff 100%);box-shadow:0 30px 60px -24px rgba(36,82,255,.55)}
+  .hero .wrap{padding:68px 52px 58px}
+  .hero .eyebrow{align-self:flex-start;color:#fff;background:rgba(255,255,255,.16);padding:4px 14px;border-radius:999px}
+  .hero h1{font-weight:800;font-size:clamp(26px,4vw,48px);line-height:1.32;max-width:880px}
+  .hero .dek{color:#e6ebff}.hero .meta{color:#c9d3ff}
+  .brief{border:0}
+  .note,.heads{border:0;background:#fff;border-radius:20px;padding:24px 26px;box-shadow:0 1px 3px rgba(15,23,42,.07)}
+  .note h2,.shead h2,.item h3,.idea h3,.band h2{font-weight:800}
+  .heads li:nth-last-child(-n+2){border-bottom:0}
+  .heads li::before{font-family:var(--sans);font-weight:800}
+  .shead{border-bottom:0}
+  .shead h2 span{font-family:var(--sans);font-weight:700;color:var(--accent)}
+  .chip.on{background:var(--accent);border-color:var(--accent)}
+  .news{gap:18px;margin-top:16px}
+  .item{background:#fff;border:0;border-radius:20px;padding:22px;box-shadow:0 1px 3px rgba(15,23,42,.07);transition:transform .2s,box-shadow .2s}
+  .item:hover{transform:translateY(-3px);box-shadow:0 18px 36px -18px rgba(15,23,42,.3)}
+  .item .d{font-family:var(--sans)}.item .d b{font-weight:800}
+  .cat{display:inline-block;background:#e8edff;color:var(--accent);border-radius:999px;padding:1px 10px}
+  .band{width:calc(100% - 32px);max-width:1132px;margin:0 auto;border-radius:28px;background:#0f172a}
+  .band .wrap{padding:54px 52px 76px}
+  .band .eyebrow{color:#8fa6ff}
+  .idea{border:0;border-radius:20px;box-shadow:0 20px 44px -20px rgba(15,23,42,.3)}
+  .idea .no{font-family:var(--sans);font-weight:800}
+  .idea .tags span{background:#e8edff;color:var(--accent)}
+  .copy{background:var(--accent)}.copy:hover{background:var(--accent-ink)}
+  .backs li{border:0}
+  .backs button{box-sizing:border-box;background:#fff;border-radius:14px;padding:14px 18px;margin-bottom:8px}
+  .backs .cur .bd::after{background:var(--accent)}
+  footer{background:#0f172a;margin-top:48px}
+  @media (max-width:980px){.heads li:nth-last-child(2){border-bottom:1px solid var(--line)}}
+  @media (max-width:640px){.hero .wrap{padding:40px 22px 36px}.band .wrap{padding:40px 22px 60px}}
+  .note{align-self:start}
+
+  /* headline size + weekly column */
+  .hero .wrap{padding:48px 52px 42px}
+  .hero h1{font-size:clamp(21px,2.7vw,32px);line-height:1.45;max-width:800px;margin:12px 0 12px}
+  .hero .dek{font-size:15px;max-width:720px}
+  .shead h2{font-size:21px}
+  .band h2{font-size:clamp(21px,2.4vw,26px)}
+  .band .wrap{padding:44px 52px 84px}
+  .column{position:relative;z-index:2;max-width:860px;margin:-48px auto 0;background:#fff;border-radius:24px;padding:40px 52px 34px;box-shadow:0 24px 50px -24px rgba(15,23,42,.35)}
+  .col-meta{font-size:12.5px;color:var(--sub)}
+  .column h3{font-size:clamp(20px,2.3vw,26px);font-weight:800;line-height:1.5;margin:8px 0 14px}
+  .col-lead{font-size:16px;font-weight:600;color:var(--ink);line-height:1.9;margin:0 0 20px;padding-left:16px;border-left:4px solid var(--accent)}
+  .column h4{font-size:16.5px;font-weight:800;margin:26px 0 6px}
+  .column p{font-size:15.5px;line-height:2;color:var(--ink2);margin:0 0 14px}
+  .col-points{background:#eef2ff;border-radius:16px;padding:18px 22px;margin:24px 0 8px}
+  .col-points b{font-size:13px;letter-spacing:.08em;color:var(--accent)}
+  .col-points ol{margin:8px 0 0;padding-left:1.3em}
+  .col-points li{font-size:14.5px;line-height:1.85;color:var(--ink);margin-bottom:4px}
+  .col-refs{font-size:12.5px;color:var(--sub);margin-top:16px;line-height:1.9}
+  .col-refs a{border-bottom:1px solid var(--line2)}
+  .column .act{display:flex;justify-content:flex-end;margin-top:16px}
+  @media (max-width:640px){.hero .wrap{padding:32px 22px 30px}.band .wrap{padding:34px 22px 72px}.column{padding:26px 22px 24px;border-radius:20px;margin-left:16px;margin-right:16px}}
 </style>
 </head>
 <body>
@@ -243,7 +274,7 @@
 <nav class="sec"><div class="wrap">
   <button data-go="top">トップ</button>
   <button data-go="sec-news">ニュース</button>
-  <button data-go="sec-ideas">投稿アイデア</button>
+  <button data-go="sec-ideas">週間コラム</button>
   <button data-go="sec-back">バックナンバー</button>
   <span class="sp"></span>
   <select id="picker" aria-label="号を選択"></select>
@@ -271,14 +302,14 @@
 
   <div class="band" id="sec-ideas">
     <div class="wrap">
-      <div class="eyebrow">Editor's Picks</div>
-      <h2>編集部の投稿アイデア</h2>
-      <p>今週のニュースをもとにした、そのまま使える投稿の下書き3本。切り口を変えて用意しています。</p>
+      <div class="eyebrow">Weekly Column</div>
+      <h2>今週のコラム</h2>
+      <p>この一週間の記事をまとめて読み解く、編集部の週間コラム。</p>
     </div>
     
   </div>
   <div class="wrap">
-    <div class="ideas" id="ideas"></div>
+    <article class="column" id="column"></article>
 
     <section class="blk" id="sec-back">
       <div class="shead"><h2>バックナンバー<span>Archive</span></h2><div class="r" id="back-count"></div></div>
@@ -291,7 +322,7 @@
   <div class="wrap">
     <div class="fb">
       <div class="ja">中国ガスタービン・ウォッチ</div>
-      <p style="margin-top:8px">中国のガスタービン業界の動きを、公開ニュースから毎朝まとめています。要約と投稿アイデアはClaudeが自動で作成した下書きです。使う前に一次情報を確認してください。</p>
+      <p style="margin-top:8px">中国のガスタービン業界の動きを、公開ニュースから毎朝まとめています。要約とコラムはClaudeが自動で作成したものです。使う前に一次情報を確認してください。</p>
     </div>
     <div>
       <h4>出典と著作権</h4>
@@ -359,22 +390,25 @@
         '<div class="src">出典：'+ext(n, esc(n.source)+' ↗')+'</div></div></article>';
     }).join('');
 
-    $('ideas').innerHTML = (e.ideas||[]).map((it,i)=>{
-      const refs = (it.refs||[]).map(r=>news[r]).filter(Boolean).map(n=>ext(n, esc(n.source))).join('、');
-      return '<article class="idea"><div class="no">0'+(i+1)+'</div><h3>'+esc(it.title)+'</h3>'+
-        '<p class="angle">'+esc(it.angle)+'</p>'+
-        '<div class="draft">'+esc(it.draft)+'</div>'+
-        '<div class="tags">'+(it.tags||[]).map(t=>'<span>'+esc(t)+'</span>').join('')+'</div>'+
-        (refs?'<div class="refs">根拠：'+refs+'</div>':'')+
-        '<div class="act"><button class="copy" data-i="'+i+'">本文をコピー</button></div></article>';
-    }).join('');
-    document.querySelectorAll('button.copy').forEach(b=>b.addEventListener('click', async ()=>{
-      const it = e.ideas[+b.dataset.i];
-      const text = it.title+'\n\n'+it.draft+'\n\n'+(it.tags||[]).join(' ');
-      try{ await navigator.clipboard.writeText(text); b.textContent='コピーしました'; b.classList.add('done'); }
-      catch(_){ b.textContent='本文を選択してコピーしてください'; }
-      setTimeout(()=>{ b.textContent='本文をコピー'; b.classList.remove('done'); }, 2200);
-    }));
+    const c = e.column || null;
+    if(c){
+      const refs = (c.refs||[]).map(r=>news[r]).filter(Boolean).map(n=>ext(n, esc(n.source))).join('、');
+      $('column').innerHTML =
+        '<div class="col-meta">'+esc(fmtJP(e.date))+'　｜　対象期間 '+esc(e.period||'')+'</div>'+
+        '<h3>'+esc(c.title)+'</h3>'+
+        (c.lead?'<p class="col-lead">'+esc(c.lead)+'</p>':'')+
+        (c.body||[]).map(s=> s.heading ? '<h4>'+esc(s.heading)+'</h4><p>'+esc(s.text)+'</p>' : '<p>'+esc(s.text||s)+'</p>').join('')+
+        ((c.points||[]).length?'<div class="col-points"><b>今週のポイント</b><ol>'+c.points.map(p=>'<li>'+esc(p)+'</li>').join('')+'</ol></div>':'')+
+        (refs?'<div class="col-refs">参照した記事：'+refs+'</div>':'')+
+        '<div class="act"><button class="copy" id="copycol">コラムをコピー</button></div>';
+      $('copycol').addEventListener('click', async ()=>{
+        const b=$('copycol');
+        const text = c.title+'\n\n'+(c.lead?c.lead+'\n\n':'')+(c.body||[]).map(s=> s.heading? '■ '+s.heading+'\n'+s.text : (s.text||s)).join('\n\n')+((c.points||[]).length?'\n\n【今週のポイント】\n'+c.points.map((p,i)=>(i+1)+'. '+p).join('\n'):'');
+        try{ await navigator.clipboard.writeText(text); b.textContent='コピーしました'; b.classList.add('done'); }
+        catch(_){ b.textContent='本文を選択してコピーしてください'; }
+        setTimeout(()=>{ b.textContent='コラムをコピー'; b.classList.remove('done'); }, 2200);
+      });
+    } else { $('column').innerHTML = '<p class="col-lead">この号にはコラムがありません。</p>'; }
 
     $('back-count').textContent = '全 '+E.length+' 号';
     $('backs').innerHTML = E.map(x=>{
