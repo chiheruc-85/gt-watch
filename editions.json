@@ -3,7 +3,7 @@
   {
    "date": "2026-11-14",
    "period": "2026/11/07 – 11/14",
-   "summary": "今週は第9回進博会（11/5–10）関連の燃機案件が中心。中国能建が中東案件向けに外資OEMの燃機を調達し、外資OEMは「電力スーパーサイクル」と水素対応を強調。10/30の四部門《指導意見》を受けた業界の論調も続いている。",
+   "summary": "今週は第9回進博会（11/5–10）関連の燃機案件が中心。中国能建が中東案件向けに外資OEMの燃機を調達し、メーカー側ではシーメンス・エナジーが過去最高の受注残を発表、GEベルノバは水素対応の節目を公表した。",
    "ideas": [
     {
      "title": "進博会で買われた燃機は、どこで回るのか——行き先は中東",
@@ -33,7 +33,8 @@
      "refs": [
       2,
       3,
-      4
+      4,
+      7
      ]
     },
     {
@@ -110,6 +111,22 @@
      "summary": "データセンター電力需要の拡大で燃機の供給は逼迫。能源局幹部は、これは国産燃機にとって好機であると同時に挑戦でもあると述べた。",
      "source": "新華社（新浪）",
      "url": "https://t.cj.sina.com.cn/articles/view/2810373291/a782e4ab0200302a4"
+    },
+    {
+     "date": "11/11",
+     "cat": "メーカー発表",
+     "title": "シーメンス・エナジー、2026年度は過去最高の受注残1,640億ユーロ。ガスタービン需要は引き続き堅調と予想",
+     "summary": "11月11日の通期決算発表で、Gas Servicesは比較ベースで約20%の増収となった。データセンター、系統安定化、石炭火力の代替、産業需要を背景に、2027年度もガスタービン市場は堅調と見込む。",
+     "source": "Siemens Energy（公式発表）",
+     "url": "https://siemens-energy.com/global/en/home/press-releases/earnings-release-q4-fy-2026--siemens-energy-reports-a-record-yea.html"
+    },
+    {
+     "date": "11/10",
+     "cat": "メーカー発表",
+     "title": "GEベルノバ、航空転用型ガスタービンの水素対応で新たな節目。LM6000VELOXで水素100%の試験完了",
+     "summary": "米グリーンビルの水素試験設備で、LM2500XPRESSの水素50%混焼（DLE方式）を実証し、LM6000VELOXでは水素専焼の能力を確認した。同社燃機の水素・水素混合燃料での累計運転時間は1,100万時間を超えた。",
+     "source": "GE Vernova（公式発表）",
+     "url": "https://www.gevernova.com/news/press-releases/ge-vernova-advances-hydrogen-capabilities-aeroderivative-gas-turbines-new-milestones"
     }
    ]
   }

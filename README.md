@@ -5,6 +5,7 @@
 - `index.html` … サイト本体。`editions.json` を読み込んで表示します
 - `editions.json` … 各号のデータ（新しい順）
 - `feed.xml` … RSSフィード（最新30号）
+- `assets/` … 写真（CC0：Wilfredor／Public domain：Nabonaco、いずれもWikimedia Commons）
 - `scripts/add_edition.py` … 新しい号を追加し、`feed.xml` を再生成するスクリプト
 
 ```

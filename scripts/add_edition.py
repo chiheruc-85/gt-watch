@@ -16,7 +16,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "editions.json"
 FEED = ROOT / "feed.xml"
 MAX_EDITIONS = 365
-CATS = {"政策", "受注", "海外", "企業", "技術", "市場"}
+CATS = {"政策", "受注", "海外", "企業", "技術", "市場", "メーカー発表"}
 
 
 def fail(msg):
